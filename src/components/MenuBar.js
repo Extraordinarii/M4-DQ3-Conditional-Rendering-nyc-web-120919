@@ -15,20 +15,20 @@ const MenuBar = (props) => {
 
   return (
     <div className="ui four item menu">
-      <a className="item active" id="profile">
+      <a className={`item ${props.display === "profile" ? "active" : ""} `} id="profile" onClick = {props.notDry}>
         <i className="user large icon" id="profile"/>
       </a>
 
-      <a className="item" id="photo">
+      <a className={`item ${props.display === "photo" ? "active" : ""}`} id="photo" onClick = {props.notDry}>
         <i className="photo large icon" id="photo"/>
       </a>
 
-      <a className="item" id="cocktail">
-        <i className="cocktail large icon" id="cocktail"/>
+      <a className={`item ${props.display === "cocktail" ? "active" : ""}`} id="cocktail" onClick = {props.notDry}>
+        <i className="cocktail large icon" id="cocktail" />
       </a>
 
-      <a className="item" id="pokemon"> 
-        <i className=" themeisle large icon" id="pokemon"/>
+      <a className={`item ${props.display === "pokemon" ? "active" : ""}`} id="pokemon" onClick = {props.notDry}> 
+        <i className=" themeisle large icon" id="pokemon" />
       </a>
     </div>
   )
